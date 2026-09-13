@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fake Alibi</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <section id="home" class="card">
+    <h1>FAKE ALIBI</h1><p class="sub">Lie naturally. Hide the words. Catch the liar.</p>
+    <input id="name" maxlength="20" placeholder="Nama kamu">
+    <button id="create">CREATE ROOM</button>
+    <div class="or">atau</div>
+    <input id="room" maxlength="4" placeholder="ROOM CODE">
+    <button id="join">JOIN ROOM</button>
+    <p id="err"></p>
+  </section>
+
+  <section id="game" class="hidden">
+    <header><div><b>FAKE ALIBI</b><small id="roomLabel"></small></div><div class="timer" id="timer">--</div></header>
+    <div class="card">
+      <div id="role"></div>
+      <h2 id="phaseTitle"></h2>
+      <p id="scenario"></p>
+      <div id="secret" class="secrets"></div>
+    </div>
+    <div id="players" class="card"></div>
+    <div id="chatBox" class="card hidden">
+      <div id="messages"></div>
+      <div class="send"><input id="msg" placeholder="Tulis alibi / pertanyaan..."><button id="send">Kirim</button></div>
+    </div>
+    <div id="guessBox" class="card hidden">
+      <h3>TEBAK 3 KATA RAHASIA</h3>
+      <input class="guess" placeholder="Kata 1"><input class="guess" placeholder="Kata 2"><input class="guess" placeholder="Kata 3">
+      <button id="lock">LOCK ANSWER</button>
+    </div>
+    <div id="revealBox" class="card hidden"></div>
+    <button id="start" class="hidden">START GAME</button>
+    <button id="next" class="hidden">NEXT ROUND</button>
+  </section>
+</main>
+<script src="/socket.io/socket.io.js"></script><script src="app.js"></script>
+</body></html>
